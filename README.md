@@ -36,7 +36,7 @@ You can also change any other configurations by editing the file configs/config.
 
 ## References
 
-- [Deep Learning for Volatility Forecasting in Asset Management]([https://link_to_paper](https://link.springer.com/article/10.1007/s00500-022-07161-1))
+- [Deep Learning for Volatility Forecasting in Asset Management](https://link.springer.com/article/10.1007/s00500-022-07161-1)
 
 ## License
 
