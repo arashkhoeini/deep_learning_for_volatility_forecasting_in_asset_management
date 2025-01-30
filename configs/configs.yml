@@ -1,0 +1,17 @@
+
+device: 'cuda'
+data_path: 'database/DJI500'
+
+model:
+  arch: "LSTM"
+  input_size: 2
+  hidden_size: 58
+  output_size: 1
+  dropout: 0.2
+
+train:
+  lr: 0.00001
+  seq_len: 20
+  p_epochs: 300
+  epochs: 20
+  criterion: "QLIKE"
