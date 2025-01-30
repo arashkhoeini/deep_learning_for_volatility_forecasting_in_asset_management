@@ -26,22 +26,21 @@ pip install -r requirements.txt
 To train the model, run the following command:
 
 ```bash
-python train.py --model lstm --loss mse
+python train.py model.arch=LSTM train.criterion=MSE
 ```
 
-You can switch the loss function to QLIKE by changing the `--loss` parameter:
+You can switch the loss function to QLIKE by changing the `train.criterion` parameter.
 
-```bash
-python train.py --model lstm --loss qlike
-```
+You can also change any other configurations by editing the file configs/config.yml
+
 
 ## References
 
-- [Deep Learning for Volatility Forecasting in Asset Management](https://link_to_paper)
+- [Deep Learning for Volatility Forecasting in Asset Management]([https://link_to_paper](https://link.springer.com/article/10.1007/s00500-022-07161-1))
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Contributing
 
