@@ -8,15 +8,15 @@ class StackedLSTM(nn.Module):
     Introduced in the paper: "Deep learning for volatility forecasting in asset management".
     https://link.springer.com/article/10.1007/s00500-022-07161-1
     """
-    def __init__(self, input_size, hidden_size, output_size, dropout=0.2):
+    def __init__(self, input_size, hidden_size, output_size, n_layers, dropout=0.2):
         super(StackedLSTM, self).__init__()
         
         # 2-layer stacked LSTM
         self.lstm = nn.LSTM(
             input_size = input_size,
             hidden_size = hidden_size,
-            num_layers = 2,
-            batch_first = True,
+            num_layers = n_layers,
+            batch_first =True,
             dropout = dropout,
         )
         
@@ -28,7 +28,7 @@ class StackedLSTM(nn.Module):
         if (h_t is None) or (c_t is None):
             lstm_out, (h_t, c_t) = self.lstm(x)
         else:
-            lstm_out, (h_t, c_t) = self.lstm(x, (h_t, c_t))  # Output from LSTM
+            lstm_out, (h_t, c_t) = self.lstm(x, (h_t, c_t)) 
         
         
         # Fully connected layer with Softplus activation

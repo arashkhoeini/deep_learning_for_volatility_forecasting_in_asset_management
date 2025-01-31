@@ -1,3 +1,3 @@
-from .utils import mkdir
+from .utils import mkdir, read_data
 
-__all__ = ['mkdir']
+__all__ = ['mkdir', 'read_data']

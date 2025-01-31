@@ -1,17 +1,19 @@
 
 device: 'cuda'
+dataset: 'DJI500'
 data_path: 'database/DJI500'
 
 model:
-  arch: "LSTM"
-  input_size: 2
+  arch: "LSTM1"
+  input_size: 0 # will be set in main.py
   hidden_size: 58
-  output_size: 1
+  output_size: 0 # will be set in main.py
+  n_layers: 2
   dropout: 0.2
 
 train:
   lr: 0.00001
   seq_len: 20
-  p_epochs: 300
-  epochs: 20
-  criterion: "QLIKE"
+  p_epochs: 1
+  epochs: 1
+  criterion: "MSE"

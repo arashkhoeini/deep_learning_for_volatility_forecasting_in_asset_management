@@ -16,7 +16,6 @@ class TimeSeriesDataset(Dataset):
             std = np.std(augmented_data, axis=0)  # Compute standard deviation
             standardized_data = data / std  # Standardize data
 
-        
         self.data = torch.tensor(data, dtype=torch.float32, device=device)
         self.seq_length = seq_length
     
@@ -25,5 +24,6 @@ class TimeSeriesDataset(Dataset):
     
     def __getitem__(self, idx):
         x = self.data[idx:idx + self.seq_length]
-        y = self.data[idx + self.seq_length][1]  # Predict next value
+        
+        y = self.data[idx + self.seq_length][len(x[0]) // 2:]  # Predict next value
         return idx, x, y
