@@ -25,7 +25,7 @@ The original paper reports results of two datasets:
 ## Installation
 
 ```bash
-git clone https://github.com/arashkhoeini/volatility_prediction.git
+git clone https://github.com/arashkhoeini/deep_learning_for_volatility_forecasting_in_asset_management.git
 cd volatility_prediction
 pip install -r requirements.txt
 ```
